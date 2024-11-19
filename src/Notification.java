@@ -1,22 +1,11 @@
-import java.util.Date;
-
-// Notification Class
-class Notification {
-    private int notificationID;
-    private String message;
-    private Date dateSent;
-    private NotificationType type;
-
-    public void sendNotification(int memberID) {
-        System.out.println("Sending notification to memberID: " + memberID);
+public class Notification {
+    public void triggerShiftUpdateNotification(Employee employee) {
+        System.out.println("Notification sent to Employee ID: " + employee.getEmployeeID() +
+                " - Your shift schedule has been updated.");
     }
 
-    public void archiveNotification() {
-        System.out.println("Archiving notification with ID: " + notificationID);
+    public void sendBookingConfirmation(Member member, String bookingDetails) {
+        System.out.println("Notification sent to Member: " + member.getName() +
+                " - Booking confirmed: " + bookingDetails);
     }
-}
-
-// Enum for NotificationType
-enum NotificationType {
-    REMINDER, ALERT, UPDATE;
 }

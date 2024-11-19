@@ -3,7 +3,7 @@ class Event {
     private int eventID;
     private String title;
     private String description;
-    private Schedule schedule;
+    private ShiftSchedule schedule;
     private int capacity;
 
     public void registerMember(int memberID) {

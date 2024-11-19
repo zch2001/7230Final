@@ -1,26 +1,17 @@
-import java.util.Date;
+public class Space {
+    private String spaceName;
+    private boolean isAvailable;
 
-// Space Class
-class Space {
-    private int spaceID;
-    private String type;
-    private int capacity;
-    private boolean availability;
-
-    public void bookSpace(int memberID, Date dateTime) {
-        System.out.println("Booking space for memberID: " + memberID);
+    public Space(String spaceName, boolean isAvailable) {
+        this.spaceName = spaceName;
+        this.isAvailable = isAvailable;
     }
 
-    public void cancelBooking(int bookingID) {
-        System.out.println("Cancelling booking with ID: " + bookingID);
+    public boolean checkAvailability() {
+        return isAvailable;
     }
 
-    public boolean checkAvailability(Date date) {
-        System.out.println("Checking availability for date: " + date);
-        return availability;
-    }
-
-    public int getCapacity() {
-        return capacity;
+    public String getSpaceName() {
+        return spaceName;
     }
 }

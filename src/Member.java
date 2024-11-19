@@ -1,36 +1,23 @@
-import java.util.Date;
-import java.util.List;
-
-// Member Class
-class Member {
+public class Member {
     private int memberID;
     private String name;
-    private MembershipType membershipType;
-    private String billingInfo;
-    private List<String> usageHistory;
+    private String membershipType;
 
-    public void bookSpace(int spaceID, Date date) {
-        System.out.println("Member booking space with spaceID: " + spaceID);
+    public Member(int memberID, String name, String membershipType) {
+        this.memberID = memberID;
+        this.name = name;
+        this.membershipType = membershipType;
     }
 
-    public void registerForEvent(int eventID) {
-        System.out.println("Registering member for event with eventID: " + eventID);
+    public String getName() {
+        return name;
     }
 
-    public void submitFeedback(int branchID, int rating, String comments) {
-        System.out.println("Submitting feedback for branch with branchID: " + branchID);
+    public String getMembershipType() {
+        return membershipType;
     }
 
-    public void viewInvoice() {
-        System.out.println("Viewing invoice for member: " + name);
+    public int getMemberID() {
+        return memberID;
     }
-
-    public void renewMembership() {
-        System.out.println("Renewing membership for member: " + name);
-    }
-}
-
-// Enum for MembershipType
-enum MembershipType {
-    DAILY, WEEKLY, MONTHLY;
 }

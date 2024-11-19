@@ -16,7 +16,7 @@ class Branch {
         System.out.println("Removing space from branch...");
     }
 
-    public void manageEmployeeSchedule(int employeeID, Schedule schedule) {
+    public void manageEmployeeSchedule(int employeeID, ShiftSchedule schedule) {
         System.out.println("Managing employee schedule for employeeID: " + employeeID);
     }
 

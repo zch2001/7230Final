@@ -1,26 +1,32 @@
-import java.util.Date;
-
-// Booking Class
-class Booking {
+public class Booking {
     private int bookingID;
-    private Date startTime;
-    private Date endTime;
-    private BookingStatus status;
+    private Member member;
+    private String spaceName;
+    private String bookingTime;
+    private String status;
+
+    public Booking(int bookingID, Member member, String spaceName, String bookingTime) {
+        this.bookingID = bookingID;
+        this.member = member;
+        this.spaceName = spaceName;
+        this.bookingTime = bookingTime;
+        this.status = "Pending";
+    }
 
     public void confirmBooking() {
-        System.out.println("Confirming booking with bookingID: " + bookingID);
+        this.status = "Confirmed";
+        System.out.println("Booking confirmed for " + spaceName + " at " + bookingTime);
     }
 
-    public void cancelBooking() {
-        System.out.println("Cancelling booking with bookingID: " + bookingID);
+    public String getSpaceName() {
+        return spaceName;
     }
 
-    public void checkStatus() {
-        System.out.println("Booking status: " + status);
+    public String getBookingTime() {
+        return bookingTime;
     }
-}
 
-// Enum for BookingStatus
-enum BookingStatus {
-    REQUESTED, CONFIRMED, IN_USE, COMPLETED, CANCELLED;
+    public String getStatus() {
+        return status;
+    }
 }
